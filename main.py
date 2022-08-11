@@ -472,10 +472,11 @@ def saveConfigs():
         'download_home': download_home,
         'searchKey': searchKey,
         'onlyShowSingerSelfSongs': onlyShowSingerSelfSongs
-    }, ensure_ascii=False).encode()
-    with open(cfgName, "wb", encoding="utf-8") as cf:
+    }, ensure_ascii=False)
+    with open(cfgName, "w", encoding="utf-8") as cf:
         cf.write(cfg)
         cf.flush()
+
 
 
 # 下载的文件要保存到哪里
